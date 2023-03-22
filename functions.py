@@ -40,7 +40,11 @@ def test_sides(a, b, c):
 
 
 def is_triangle(side_a, side_b, side_c):
-    is_two_sides_equals = [side_b, side_a == side_c, side_b == side_c]
+    is_two_sides_equals = [
+        side_a == side_b,
+        side_a == side_c,
+        side_b == side_c,
+    ]
     is_three_sides_equals = [side_a == side_b, side_a == side_c]
     if not test_sides(side_a, side_b, side_c):
         print("Não é um triângulo.")
@@ -50,6 +54,3 @@ def is_triangle(side_a, side_b, side_c):
         print("Triângulo Isósceles")
     else:
         print("Triângulo Escaleno")
-
-
-is_triangle(3, 3, 3)
